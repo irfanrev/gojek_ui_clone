@@ -9,9 +9,9 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: PreferredSize(
         child: Container(
-          padding: EdgeInsets.only(top: 25.0, left: 15, right: 15),
+          padding: EdgeInsets.only(top: 30.0, left: 15, right: 15),
           width: MediaQuery.of(context).size.width,
-          height: 95.0,
+          height: 110.0,
           color: Colors.white,
           child: Row(
             children: [
@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
                       height: 45,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          color: Colors.indigo,
+                          color: Colors.lightBlue[600],
                           boxShadow: [
                             BoxShadow(
                               color: Colors.grey,
@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                           ]),
                       child: Center(
                         child: Icon(
-                          Icons.payment,
+                          Icons.account_balance_wallet,
                           color: Colors.white,
                           size: 24,
                         ),
@@ -71,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: Icon(Icons.view_agenda),
+                    icon: Icon(Icons.attach_email),
                   )
                 ],
               ),
@@ -79,14 +79,28 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         preferredSize: Size.fromHeight(
-          70.0,
+          90.0,
         ),
       ),
       body: ListView(
         children: [
-          Center(
-            child: Text('Home Screen'),
-          )
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+            height: 150,
+            width: MediaQuery.of(context).size.width,
+            color: Colors.grey,
+            child: Container(
+              height: 110,
+              width: MediaQuery.of(context).size.width,
+              margin: EdgeInsets.symmetric(horizontal: 20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.lightBlue[600],
+              ),
+            ),
+          ),
         ],
       ),
     );
