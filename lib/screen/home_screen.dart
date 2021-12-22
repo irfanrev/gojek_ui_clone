@@ -23,6 +23,7 @@ class HomeScreen extends StatelessWidget {
                       height: 45,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
+                          border: Border.all(color: Colors.white, width: 2.5),
                           color: Colors.lightBlue[600],
                           boxShadow: [
                             BoxShadow(
@@ -87,18 +88,386 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
+
+          /// Menu Utama
           Container(
-            height: 150,
+            height: 120,
             width: MediaQuery.of(context).size.width,
-            color: Colors.grey,
+            color: Colors.white,
             child: Container(
               height: 110,
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.symmetric(horizontal: 20),
+              margin: EdgeInsets.symmetric(horizontal: 15),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.lightBlue[600],
               ),
+              child: Stack(
+                children: [
+                  Positioned(
+                    bottom: -20,
+                    left: -10,
+                    child: Container(
+                      width: 80,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white24,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    top: -10,
+                    child: Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white30,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    right: -10,
+                    bottom: -20,
+                    child: Container(
+                      width: 110,
+                      height: 110,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white24,
+                      ),
+                    ),
+                  ),
+                  SizedBox.expand(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.account_balance_wallet_outlined,
+                              color: Colors.white,
+                              size: 42,
+                            ),
+                            SizedBox(
+                              height: 8.0,
+                            ),
+                            Text(
+                              'Payment',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.confirmation_num_outlined,
+                              color: Colors.white,
+                              size: 42,
+                            ),
+                            SizedBox(
+                              height: 8.0,
+                            ),
+                            Text(
+                              'Promo',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.add_box_outlined,
+                              color: Colors.white,
+                              size: 42,
+                            ),
+                            SizedBox(
+                              height: 8.0,
+                            ),
+                            Text(
+                              'Top Up',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.article_outlined,
+                              color: Colors.white,
+                              size: 42,
+                            ),
+                            SizedBox(
+                              height: 8.0,
+                            ),
+                            Text(
+                              'Other',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 25,
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: 200,
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          width: 62,
+                          height: 62,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 7,
+                                  spreadRadius: 0.1,
+                                )
+                              ]),
+                          child: Icon(
+                            Icons.local_taxi_rounded,
+                            color: Colors.lightBlue,
+                            size: 34,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        Text('GoCar')
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          width: 62,
+                          height: 62,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 7,
+                                  spreadRadius: 0.1,
+                                )
+                              ]),
+                          child: Icon(
+                            Icons.motorcycle_rounded,
+                            color: Colors.green,
+                            size: 34,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        Text('GoRide')
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          width: 62,
+                          height: 62,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 7,
+                                  spreadRadius: 0.1,
+                                )
+                              ]),
+                          child: Icon(
+                            Icons.food_bank_rounded,
+                            color: Colors.red[800],
+                            size: 34,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        Text('GoFood')
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          width: 62,
+                          height: 62,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 7,
+                                  spreadRadius: 0.1,
+                                )
+                              ]),
+                          child: Icon(
+                            Icons.art_track_rounded,
+                            color: Colors.purple,
+                            size: 34,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        Text('GoNews')
+                      ],
+                    )
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          width: 62,
+                          height: 62,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 7,
+                                  spreadRadius: 0.1,
+                                )
+                              ]),
+                          child: Icon(
+                            Icons.dashboard_rounded,
+                            color: Colors.greenAccent,
+                            size: 34,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        Text('GoSend')
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          width: 62,
+                          height: 62,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 7,
+                                  spreadRadius: 0.1,
+                                )
+                              ]),
+                          child: Icon(
+                            Icons.dvr_rounded,
+                            color: Colors.orange[700],
+                            size: 34,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        Text('GoDialy')
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          width: 62,
+                          height: 62,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 7,
+                                  spreadRadius: 0.1,
+                                )
+                              ]),
+                          child: Icon(
+                            Icons.smartphone_rounded,
+                            color: Colors.lightBlue[600],
+                            size: 34,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        Text('GoPulsa')
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Container(
+                          width: 62,
+                          height: 62,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(12),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 7,
+                                  spreadRadius: 0.1,
+                                )
+                              ]),
+                          child: Icon(
+                            Icons.auto_awesome_mosaic_rounded,
+                            color: Colors.grey,
+                            size: 34,
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8.0,
+                        ),
+                        Text('GoNews')
+                      ],
+                    )
+                  ],
+                )
+              ],
             ),
           ),
         ],
