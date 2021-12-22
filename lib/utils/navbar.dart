@@ -35,7 +35,7 @@ class _NavbarState extends State<Navbar> {
         selectedItemColor: Colors.indigo,
         unselectedItemColor: Colors.grey,
         showUnselectedLabels: true,
-        items: [
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
