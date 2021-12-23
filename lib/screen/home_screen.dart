@@ -470,6 +470,69 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: 15.0,
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            child: Text(
+              'Recommend for you',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18.0,
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 8.0,
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            margin: EdgeInsets.symmetric(horizontal: 15.0),
+            height: 120,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(13),
+                topRight: Radius.circular(13),
+              ),
+              image: DecorationImage(
+                  image: AssetImage('assets/gojek.jpeg'), fit: BoxFit.fitWidth),
+            ),
+          ),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            margin: EdgeInsets.symmetric(horizontal: 15.0),
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            height: 80,
+            decoration: BoxDecoration(
+              color: Colors.grey[100],
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(13),
+                bottomRight: Radius.circular(13),
+              ),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Gojek Has a Unicorn Company',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18.0,
+                      color: Colors.black54),
+                ),
+                SizedBox(
+                  height: 4.0,
+                ),
+                Text(
+                  'Indonesia harus bangga dengan adanya Gojek sebagai perusahaan yang berstatus Unicord',
+                  style: TextStyle(color: Colors.grey),
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
